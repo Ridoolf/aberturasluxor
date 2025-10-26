@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxor | Renovar te hace bien</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <div class="navbar__group">
+        <img src="./assets/logo.png" alt="Luxor" class="navbar__logo" />
+
+        <nav class="navbar__links" id="navLinks">
+          <a href="#inicio" class="link">Home</a>
+          <a href="#servicios" class="link">Servicios</a>
+          <a href="#sobre_nosotros" class="link">Sobre nosotros</a>
+          <a href="#contacto" class="link">Contáctanos</a>
+        </nav>
+      </div>
+
+      <!-- Botón separado -->
+      <a href="#contacto" class="btn-cta">Contáctanos</a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <h1>Renovar te <br>hace bien</h1>
+        <p>¡Te ayudamos a <strong>concretar tus <br>proyectos de renovación!</strong></p>
+      </div>
+
+      <div class="hero__image">
+        <img src="./assets/home_img.png" alt="QR + WhatsApp" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="services">
+    <div class="services__content">
+      <h3>Nuestros servicios</h3>
+
+      <div class="carousel">
+        <!-- Track 1 -->
+        <div class="carousel__track">
+          <div class="card">
+            <img src="./assets/servicios/persianas.svg" alt="">
+            <h4>SOMOS CASA DE PERSIANAS</h4>
+            <p>(Pvc / Aluminio / Madera)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/mamparas.svg" alt="">
+            <h4>HACEMOS MAMPARAS DE BAÑO</h4>
+            <p>Vidrio templado de seguridad</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/puertas-corredizas.svg" alt="">
+            <h4>HACEMOS PUERTAS CORREDIZAS</h4>
+            <p>(Pvc / Aluminio / Vidrio)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/aberturas.svg" alt="">
+            <h4>ABERTURAS DE ALUMINIO</h4>
+            <p>(Obras en seco, variedad de diseños y líneas)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/cortinas.svg" alt="">
+            <h4>HACEMOS CORTINAS</h4>
+            <p>(Roller)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/puertas.svg" alt="">
+            <h4>HACEMOS PUERTAS</h4>
+            <p>(Pvc / Aluminio / Vidrio)</p>
+          </div>
+        </div>
+
+        <!-- Track 2 duplicado -->
+        <div aria-hidden="true" class="carousel__track">
+          <div class="card">
+            <img src="./assets/servicios/persianas.svg" alt="">
+            <h4>SOMOS CASA DE PERSIANAS</h4>
+            <p>(Pvc / Aluminio / Madera)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/mamparas.svg" alt="">
+            <h4>HACEMOS MAMPARAS DE BAÑO</h4>
+            <p>Vidrio templado de seguridad</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/puertas-corredizas.svg" alt="">
+            <h4>HACEMOS PUERTAS CORREDIZAS</h4>
+            <p>(Pvc / Aluminio / Vidrio)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/aberturas.svg" alt="">
+            <h4>ABERTURAS DE ALUMINIO</h4>
+            <p>(Obras en seco, variedad de diseños y líneas)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/cortinas.svg" alt="">
+            <h4>HACEMOS CORTINAS</h4>
+            <p>(Roller)</p>
+          </div>
+          <div class="card">
+            <img src="./assets/servicios/puertas.svg" alt="">
+            <h4>HACEMOS PUERTAS</h4>
+            <p>(Pvc / Aluminio / Vidrio)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="sobre-nosotros" class="about">
+    <div class="about__content">
+      <div class="about__image">
+        <img src="./assets/sobre_nosotros_img.png" alt="Renovar te hace bien">
+      </div>
+
+      <div class="about__text">
+        <p class="about__label">Sobre nosotros</p>
+        <h3>
+          Calidad <br />
+          <span class="highlight">asegurada</span>
+        </h3>
+        <p class="about__desc">
+          Tenemos <strong>+35 años de experiencia</strong> en la creación e
+          instalación de aberturas y cerramientos en Argentina.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="persiana" class="cta-banner">
+    <div class="cta-banner__content">
+      <img src="./assets/contacto.png" alt="¿Querés cambiar tu persiana vieja?">
+    </div>
+  </section>
+
+  <section id="contacto" class="contact">
+    <div class="container contact__content">
+
+      <div class="contact__info">
+        <h3>Contactanos</h3>
+        <p>Envíanos un mensaje, estaremos atendiéndote en breve.</p>
+
+        <ul class="contact__list">
+          <li>
+            <img src="./assets/icons/mail.png" alt="Mail">
+            <span>Aberturas.luxor@gmail.com</span>
+          </li>
+          <li>
+            <img src="./assets/icons/instagram.png" alt="Instagram">
+            <span>@Aberturas.luxor</span>
+          </li>
+          <li>
+            <img src="./assets/icons/facebook.png" alt="Facebook">
+            <span>Aberturas Luxor</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form">
+        <input type="text" placeholder="Nombre y apellido" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+
+    </div>
+  </section>
+
+  <section id="local" class="local">
+    <div class="local__content">
+      <div class="local__image">
+        <img src="./assets/local.png" alt="Frente del local Luxor" />
+      </div>
+
+      <!-- Bloque clickable completo -->
+      <a href="https://www.google.com/maps?q=Av.+Córdoba+4318,+CABA" target="_blank" class="local__cta">
+        <div class="local__text">
+          <h3>¡Vení a conocer <br>nuestro Showroom!</h3>
+          <div class="local__address">
+            <img src="./assets/icons/location.png" alt="Ubicación" />
+            <p>Av. Córdoba 4318, CABA</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <form>
+        <div class="newsletter__text">
+          <h4>Newsletter</h4>
+          <p>Enterate de nuestras últimas novedades</p>
+        </div>
+
+        <div class="newsletter__inputs">
+          <input type="email" placeholder="Email" required />
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+
+    <!-- Footer principal -->
+    <div class="footer__content">
+      <div class="footer__left">
+        <div class="footer__top">
+          <img src="./assets/logo.png" alt="Logo Luxor" class="footer__logo" />
+
+          <nav class="footer__nav">
+            <a href="#inicio">Home</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#sobre-nosotros">Sobre nosotros</a>
+            <a href="#contacto">Contactanos</a>
+          </nav>
+        </div>
+
+        <ul class="footer__info">
+          <li><img src="./assets/icons/mail-white.png" alt=""> Aberturas.luxor@gmail.com</li>
+          <li><img src="./assets/icons/phone.png" alt=""> +54 11 2400-1758 / +54 11 7162-0611</li>
+          <li><img src="./assets/icons/location.png" alt=""> Av. Córdoba 4318, Buenos Aires, Argentina</li>
+        </ul>
+      </div>
+
+      <div class="footer__right">
+        <p>¡Seguinos en <br> redes sociales!</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/aberturas.luxor?locale=es_LA" target="_blank"><img
+              src="./assets/icons/facebook-white.png" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/aberturas.luxor/?hl=es" target="_blank"><img
+              src="./assets/icons/instagram-white.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('is-open'));
+
+    // scroll suave + cerrar menú
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+          links.classList.remove('is-open');
+        }
+      });
+    });
+
+    // efecto blur del navbar al scrollear
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+
+</html>
