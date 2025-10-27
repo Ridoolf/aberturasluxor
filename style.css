@@ -18,7 +18,14 @@ body {
 
 html, body { overflow-x: hidden; }
 
-/* ---------- NAV ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -67,6 +74,7 @@ html, body { overflow-x: hidden; }
   transition: color var(--ease);
 }
 
+/* Hover (solo en desktop) */
 @media (hover: hover) and (pointer: fine) {
   .link::after {
     content: "";
@@ -110,7 +118,65 @@ html, body { overflow-x: hidden; }
   cursor: pointer;
 }
 
-/* ---------- HERO ---------- */
+/* ---------- RESPONSIVE NAVBAR ---------- */
+@media (max-width: 900px) {
+  .navbar__toggle { display: block; }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    /* Igual que la barra con blur */
+    background: rgba(3, 3, 4, 0.8);
+    backdrop-filter: blur(6px);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    padding: 1.8em 0;
+
+    /* quitamos la línea naranja */
+    border-top: none;
+
+    /* sin animación de slide; sólo visibilidad */
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .navbar__links.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar__links a {
+    color: var(--color-blanco);
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .navbar__links a:hover { color: var(--color-naranja); }
+
+  .btn-cta { display: none; }
+
+  /* Overlay (sin cambios, por si ya lo usás) */
+  .navbar__overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+  }
+  .navbar__overlay.active { display: block; }
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
 .hero {
   background: var(--color-naranja);
   padding-top: 86px;
@@ -159,60 +225,11 @@ html, body { overflow-x: hidden; }
   width: 100%;
   height: auto;
   margin-bottom: -19px;
-  /* ajuste final */
   max-height: 90vh;
 }
 
+/* ---------- RESPONSIVE HERO ---------- */
 @media (max-width: 980px) {
-  .navbar__links {
-    display: none;
-    position: absolute;
-    right: 22px;
-    top: 70px;
-    flex-direction: column;
-    gap: 14px;
-
-    /* 👇 Estilo visual mejorado */
-    background: rgba(3, 3, 4, 0.85);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 16px 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .navbar__links.is-open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: all;
-  }
-
-  .navbar__toggle {
-    display: block;
-  }
-
-  /* ocultar el botón en mobile */
-  .btn-cta {
-    display: none;
-  }
-
-  /* hover en mobile: solo cambia color */
-  .link:hover {
-    color: var(--color-naranja);
-  }
-
-  /* 👇 Imagen con ajuste adicional */
-  .hero__image img {
-    margin-bottom: -41px;
-    /* se pega mejor al borde naranja en mobile */
-  }
-
   .hero__inner {
     grid-template-columns: 1fr;
     row-gap: 28px;
@@ -229,35 +246,36 @@ html, body { overflow-x: hidden; }
     max-width: 560px;
     margin: 0 auto;
   }
+
+  .hero__image img {
+    margin-bottom: -41px;
+  }
 }
 
 @media (max-width: 768px) {
   .hero__image img {
     margin-bottom: -41px;
-    /* compensa mejor en tablets */
   }
 }
 
 @media (max-width: 480px) {
   .hero__image img {
     margin-bottom: -35.3px;
-    /* compensa el despegue en celulares angostos */
   }
 }
 
 @media (max-width: 380px) {
   .hero__image img {
     margin-bottom: -34px;
-    /* ajuste extra para móviles pequeños */
   }
 }
 
 @media (max-width: 320px) {
   .hero__image img {
     margin-bottom: -32.8px;
-    /* ajuste extra para móviles pequeños */
   }
 }
+
 
 /* SERVICIOS */
 .services {

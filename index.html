@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="./assets/icon-tab.png">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  
 </head>
 
 <body>
@@ -190,7 +191,7 @@
       </div>
 
       <!-- Bloque clickable completo -->
-      <a href="https://www.google.com/maps?q=Av.+Córdoba+4318,+CABA" target="_blank" class="local__cta">
+      <a href="https://www.google.com/maps/place/Aberturas+Luxor/@-34.5961392,-58.4323056,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccba1d40b328b:0xeeb19d8de05a2f97!8m2!3d-34.5961437!4d-58.4274347!16s%2Fg%2F11vr4vxpmg?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="local__cta">
         <div class="local__text">
           <h3>¡Vení a conocer <br>nuestro Showroom!</h3>
           <div class="local__address">
@@ -267,21 +268,32 @@
   </footer>
 
   <script defer>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => links.classList.toggle('is-open'));
+    const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+const overlay = document.createElement("div");
 
-    // scroll suave + cerrar menú
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href');
-        if (id.length > 1) {
-          e.preventDefault();
-          document.querySelector(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-          links.classList.remove('is-open');
-        }
-      });
-    });
+overlay.classList.add("navbar__overlay");
+document.body.appendChild(overlay);
+
+navToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("active");
+  overlay.classList.toggle("active", isOpen);
+});
+
+overlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+// Cerrar el menú al hacer clic en un enlace
+document.querySelectorAll('.navbar__links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+});
+
+
 
     // efecto blur del navbar al scrollear
     window.addEventListener('scroll', () => {
