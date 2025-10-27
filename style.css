@@ -309,8 +309,7 @@ html, body { overflow-x: hidden; }
 }
 
 .card img {
-  width: 60px;
-  margin-bottom: 1em;
+  width: 220px;
 }
 
 .card h4 {
@@ -390,7 +389,7 @@ html, body { overflow-x: hidden; }
 .about {
   background: var(--color-blanco);
   color: var(--color-negro);
-  padding: 6em 1em;
+  padding: 4em 1em;
   display: flex;
   justify-content: center;
 }
@@ -417,18 +416,16 @@ html, body { overflow-x: hidden; }
 
 .about__label {
   color: #6e6e6e;
-  font-size: 0.9em;
+  font-size: 1.1em;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 0.8em;
 }
 
 .about__text h3 {
-  font-size: 2.5em;
+  font-size: 3em;
   line-height: 1.2;
   font-weight: 700;
   width: fit-content;
-  margin-bottom: 0.8em;
   position: relative;
   /* 👈 necesario para el ::after */
   display: inline-block;
@@ -522,7 +519,7 @@ html, body { overflow-x: hidden; }
 
 .cta-banner__content img {
   width: 100%;
-  max-width: 1100px;
+  max-width: 900px;
   height: auto;
   display: block;
 }
