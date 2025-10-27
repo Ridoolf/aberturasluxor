@@ -1,3 +1,5 @@
+/* === GENERAL ===*/
+
 :root {
   --color-negro: #030304;
   --color-naranja: #E9540D;
@@ -23,9 +25,7 @@ html {
   scroll-padding-top: 90px;
 }
 
-/* ==================================================
-   NAVBAR
-================================================== */
+/* === Navbar === */
 
 .navbar {
   position: fixed;
@@ -75,7 +75,6 @@ html {
   transition: color var(--ease);
 }
 
-/* Hover (solo en desktop) */
 @media (hover: hover) and (pointer: fine) {
   .link::after {
     content: "";
@@ -119,7 +118,8 @@ html {
   cursor: pointer;
 }
 
-/* ---------- RESPONSIVE NAVBAR ---------- */
+/* === Responsive Navbar === */
+
 @media (max-width: 900px) {
   .navbar__toggle { display: block; }
 
@@ -129,7 +129,6 @@ html {
     left: 0;
     width: 100%;
 
-    /* Igual que la barra con blur */
     background: rgba(3, 3, 4, 0.8);
     backdrop-filter: blur(6px);
 
@@ -138,10 +137,8 @@ html {
     gap: 1.2em;
     padding: 1.8em 0;
 
-    /* quitamos la línea naranja */
     border-top: none;
 
-    /* sin animación de slide; sólo visibilidad */
     opacity: 0;
     pointer-events: none;
   }
@@ -158,11 +155,11 @@ html {
     text-decoration: none;
     transition: color 0.2s ease;
   }
+
   .navbar__links a:hover { color: var(--color-naranja); }
 
   .btn-cta { display: none; }
 
-  /* Overlay (sin cambios, por si ya lo usás) */
   .navbar__overlay {
     display: none;
     position: fixed;
@@ -171,12 +168,11 @@ html {
     backdrop-filter: blur(2px);
     z-index: 999;
   }
+
   .navbar__overlay.active { display: block; }
 }
 
-/* ==================================================
-   HERO
-================================================== */
+/* === Hero === */
 
 .hero {
   background: var(--color-naranja);
@@ -229,7 +225,8 @@ html {
   max-height: 90vh;
 }
 
-/* ---------- RESPONSIVE HERO ---------- */
+/* === Responsive Hero === */
+
 @media (max-width: 980px) {
   .hero__inner {
     grid-template-columns: 1fr;
@@ -277,7 +274,8 @@ html {
   }
 }
 
-/* SERVICIOS */
+/* === Servicios === */
+
 .services {
   background: var(--color-negro);
   padding: 4em 1em;
@@ -352,6 +350,8 @@ html {
   }
 }
 
+/* === Responsive Servicios === */
+
 @media (max-width: 1024px) {
   .card {
     flex: 0 0 200px;
@@ -359,7 +359,7 @@ html {
   }
 
   .card img {
-    width: 50px;
+    width: 180px;
   }
 
   .services__content h3 {
@@ -369,7 +369,6 @@ html {
   .carousel__track {
     gap: 1.5em;
     animation-duration: 35s;
-    /* más rápida */
   }
 }
 
@@ -379,7 +378,7 @@ html {
   }
 
   .card img {
-    width: 45px;
+    width: 165px;
   }
 
   .services__content h3 {
@@ -402,7 +401,7 @@ html {
   }
 }
 
-/* SOBRE NOSOTROS */
+/* === Sobre nosotros === */
 
 .about {
   background: var(--color-blanco);
@@ -445,9 +444,7 @@ html {
   font-weight: 700;
   width: fit-content;
   position: relative;
-  /* 👈 necesario para el ::after */
   display: inline-block;
-  /* mantiene ancho justo del texto */
 }
 
 .highlight {
@@ -466,13 +463,10 @@ html {
   position: absolute;
   left: 0;
   bottom: -.01em;
-  /* ajusta la altura del rectángulo */
   width: 100%;
   height: 0.35em;
-  /* grosor del subrayado */
   background: var(--color-naranja);
   z-index: -1;
-  /* lo manda detrás del texto */
   border-radius: 2px;
 }
 
@@ -485,6 +479,8 @@ html {
 .about__desc strong {
   font-weight: 700;
 }
+
+/* === Responsive Sobre nosotros === */
 
 @media (max-width: 1024px) {
   .about__content {
@@ -526,7 +522,8 @@ html {
   }
 }
 
-/* CONTACTO */
+/* === Contacto === */
+
 .cta-banner {
   background-color: var(--color-naranja);
   display: flex;
@@ -541,6 +538,8 @@ html {
   height: auto;
   display: block;
 }
+
+/* === Responsive Contacto === */
 
 @media (max-width: 1024px) {
   .cta-banner {
@@ -687,6 +686,8 @@ html {
   color: var(--color-blanco);
 }
 
+/* === Responsive Contacto === */
+
 @media (max-width: 900px) {
   .contact__content {
     flex-direction: column;
@@ -722,7 +723,8 @@ html {
   width: 20px;
 }
 
-/* FORMULARIO */
+/* === Formulario === */
+
 .contact__form {
   flex: 1;
   display: flex;
@@ -774,6 +776,8 @@ html {
   color: var(--color-blanco);
 }
 
+/* === Responsive Contact form === */
+
 @media (max-width: 900px) {
   .contact__content {
     flex-direction: column;
@@ -792,7 +796,8 @@ html {
   }
 }
 
-/* LOCAL / SHOWROOM*/
+/* === Local  ===*/
+
 .local {
   background: var(--color-naranja);
   color: var(--color-blanco);
@@ -805,17 +810,14 @@ html {
   flex-wrap: wrap;
 }
 
-/* Imagen */
 .local__image img {
   width: 100%;
   height: 100vh;
-  /* 🔥 ocupa la mitad del viewport real */
   max-height: 600px;
   object-fit: cover;
   display: block;
 }
 
-/* CTA completo */
 .local__cta {
   flex: 1;
   text-decoration: none;
@@ -830,7 +832,6 @@ html {
   overflow: hidden;
 }
 
-/* Hover general */
 .local__cta:hover {
   background-color: #9F3300;
 }
@@ -840,7 +841,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-/* 🔥 Escala todo el texto e ícono */
 .local__cta:hover .local__text {
   transform: scale(1.08);
 }
@@ -863,15 +863,13 @@ html {
   transition: transform 0.3s ease;
 }
 
-/* =======================
-   NEWSLETTER
-======================= */
+/* === Newslatter === */
+
 .newsletter {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: -3.6em;
-  /* un poco más arriba */
   z-index: 10;
   background: var(--color-blanco);
   width: 72%;
@@ -879,7 +877,6 @@ html {
   padding: 1.2em 1.8em;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -893,7 +890,6 @@ html {
   gap: 2em;
 }
 
-/* Texto */
 .newsletter__text {
   flex: 1;
 }
@@ -911,7 +907,6 @@ html {
   margin: 0;
 }
 
-/* Input + botón unidos */
 .newsletter__inputs {
   display: flex;
   flex: 1.2;
@@ -952,9 +947,8 @@ html {
   color: var(--color-blanco);
 }
 
-/* =======================
-   FOOTER
-======================= */
+/* === Footer === */
+
 .footer {
   position: relative;
   background: var(--color-negro);
@@ -964,8 +958,8 @@ html {
 
 .footer__content {
   max-width: 1100px;
-  margin: 0 auto;            /* centra horizontalmente */
-  position: relative;        /* mantiene anclaje para el footer__right */
+  margin: 0 auto;           
+  position: relative;        
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1000,7 +994,6 @@ html {
   color: var(--color-naranja);
 }
 
-/* Fila 2: datos */
 .footer__info { margin: 3em 0; }
 
 .footer__info li {
@@ -1014,16 +1007,15 @@ html {
   width: 18px;
 }
 
-/* Fila 2 derecha: redes */
 .footer__right {
   position: absolute;
   bottom: 3em;
   right: 0;
   width: 320px;
-  padding-top: 2em;                 /* ya no hace falta el padding visual */
+  padding-top: 2em;                 
   align-self: auto;
   justify-self: auto;
-  text-align: center;              /* como lo mostrás */
+  text-align: center;              
 }
 
 .footer__right p {
@@ -1051,9 +1043,8 @@ html {
   transform: scale(1.06);
 }
 
-/* =======================
-   FIX LOCAL SECTION
-======================= */
+/* === Local Footer === */
+
 .local__content {
   display: flex;
   align-items: stretch;
@@ -1106,11 +1097,9 @@ html {
   width: 26px;
 }
 
-/* =======================
-   RESPONSIVE
-======================= */
+/* === Responsive Footer === */
+
 @media (max-width: 1244px) {
-  /* Local */
   .local__content { flex-direction: column; }
 
   .local__image img {
@@ -1120,7 +1109,6 @@ html {
 
   .local__cta { padding: 2em 1em; }
 
-  /* Newsletter IN layout (no más absolute) */
   .newsletter {
     position: static;
     transform: none;
@@ -1133,17 +1121,15 @@ html {
   .newsletter form { gap: 1.2em; }
 
   .newsletter__text {
-    flex: 0 1 420px;   /* texto cómodo a la izquierda */
+    flex: 0 1 420px;   
   }
 
   .newsletter__inputs {
-    flex: 1;          /* input+botón con más aire */
+    flex: 1;          
   }
 
-  /* El footer ya no necesita tanto espacio arriba */
   .footer { padding-top: 2em; }
 }
-
 
 @media (max-width: 900px) {
   .newsletter {
@@ -1152,7 +1138,7 @@ html {
     width: 92%;
     max-width: 560px;
     margin: 0 auto 2.5em;
-    text-align: center; /* centra título y desc */
+    text-align: center; 
   }
 
   .newsletter form {
@@ -1231,7 +1217,7 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 0.8em;
-    min-width: auto; /* elimina el ancho fijo que forzaba el wrap */
+    min-width: auto; 
   }
 
   .footer__nav a {
@@ -1240,34 +1226,32 @@ html {
   }
 }
 
-/* ===== Footer micro layout < 400px ===== */
 @media (max-width: 400px) {
-  /* Alineación general y respiración */
   .footer__info {
-    gap: 1.1rem;               /* separa los items del listado */
+    gap: 1.1rem;               
   }
 
-  .footer__info li {    /* icono arriba, texto abajo */
-    align-items: center;       /* centrado del texto con el icono */
+  .footer__info li {    
+    align-items: center;       
     text-align: center;
     gap: 1rem;
   }
 
-  /* Teléfonos en dos líneas y sin separador */
   .footer__info li .phones {
     display: flex;
     flex-direction: column;
     gap: .25rem;
     align-items: center;
   }
-  .footer__info li .phones .sep { display: none; } /* oculta " / " o " | " */
 
-  /* Dirección en dos líneas */
+  .footer__info li .phones .sep { display: none; } 
+
   .footer__info li .addr {
     display: flex;
     flex-direction: column;
     line-height: 1.35;
     align-items: center;
   }
-  .footer__info li .addr .sep { display: none; }   /* oculta coma si la tenías */
+
+  .footer__info li .addr .sep { display: none; } 
 }
