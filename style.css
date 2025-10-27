@@ -20,6 +20,7 @@ html, body { overflow-x: hidden; }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 /* ==================================================
@@ -276,7 +277,6 @@ html {
   }
 }
 
-
 /* SERVICIOS */
 .services {
   background: var(--color-negro);
@@ -478,7 +478,7 @@ html {
 
 .about__desc {
   font-size: 1.1em;
-  max-width: 500px;
+  max-width: 350px;
   line-height: 1.6;
 }
 
