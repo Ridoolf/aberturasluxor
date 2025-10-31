@@ -96,6 +96,9 @@ html {
 }
 
 .btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--color-negro);
   background: var(--color-blanco);
   padding: 0.55em 1.2em;
@@ -106,10 +109,33 @@ html {
   transition: background var(--ease), color var(--ease), border-color var(--ease);
 }
 
+.btn-cta__icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+  transition: color var(--ease);
+}
+
 .btn-cta:hover {
   background: var(--color-naranja);
   color: var(--color-blanco);
   border-color: var(--color-naranja);
+}
+
+.btn-cta:hover {
+  background: var(--color-naranja);
+  color: var(--color-blanco);
+  border-color: var(--color-naranja);
+}
+
+.btn-cta.in-menu {
+  background: var(--color-naranja);
+  color: var(--color-blanco);
+}
+
+.btn-cta.in-menu:hover {
+  background: var(--color-blanco);
+  color: var(--color-negro);
 }
 
 .navbar__toggle {
@@ -163,10 +189,6 @@ html {
 
   .navbar__links a:hover {
     color: var(--color-naranja);
-  }
-
-  .btn-cta {
-    display: none;
   }
 
   .navbar__overlay {
