@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="./assets/icon-tab.png">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  
+
 </head>
 
 <body>
@@ -26,7 +26,6 @@
         </nav>
       </div>
 
-      <!-- Botón separado -->
       <a href="#contacto" class="btn-cta">Contáctanos</a>
 
       <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
@@ -87,7 +86,6 @@
           </div>
         </div>
 
-        <!-- Track 2 duplicado -->
         <div aria-hidden="true" class="carousel__track">
           <div class="card">
             <img src="./assets/servicios/persianas.png" alt="">
@@ -139,18 +137,20 @@
         </h3>
         <p class="about__desc">
           Tenemos <strong>+35 años de experiencia en la creación e
-          instalación de aberturas y cerramientos</strong> en Argentina.
+            instalación de aberturas y cerramientos</strong> en Argentina.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- PERSIANA -->
   <section id="persiana" class="cta-banner">
     <div class="cta-banner__content">
       <img src="./assets/contacto.png" alt="¿Querés cambiar tu persiana vieja?">
     </div>
   </section>
 
+  <!-- CONTACTO -->
   <section id="contacto" class="contact">
     <div class="container contact__content">
 
@@ -184,14 +184,15 @@
     </div>
   </section>
 
+  <!-- LOCAL -->
   <section id="local" class="local">
     <div class="local__content">
       <div class="local__image">
         <img src="./assets/local.png" alt="Frente del local Luxor" />
       </div>
 
-      <!-- Bloque clickable completo -->
-      <a href="https://www.google.com/maps/place/Aberturas+Luxor/@-34.5961392,-58.4323056,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccba1d40b328b:0xeeb19d8de05a2f97!8m2!3d-34.5961437!4d-58.4274347!16s%2Fg%2F11vr4vxpmg?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="local__cta">
+      <a href="https://www.google.com/maps/place/Aberturas+Luxor/@-34.5961392,-58.4323056,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccba1d40b328b:0xeeb19d8de05a2f97!8m2!3d-34.5961437!4d-58.4274347!16s%2Fg%2F11vr4vxpmg?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank" class="local__cta">
         <div class="local__text">
           <h3>¡Vení a conocer <br>nuestro Showroom!</h3>
           <div class="local__address">
@@ -203,8 +204,8 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <!-- Newsletter -->
     <div class="newsletter">
       <form>
         <div class="newsletter__text">
@@ -219,8 +220,6 @@
       </form>
     </div>
 
-
-    <!-- Footer principal -->
     <div class="footer__content">
       <div class="footer__left">
         <div class="footer__top">
@@ -250,7 +249,7 @@
               <span class="addr-street">Av. Córdoba 4318</span>
               <span class="sep">, </span>
               <span class="addr-city">Buenos Aires, Argentina</span>
-            </span> 
+            </span>
           </li>
         </ul>
       </div>
@@ -267,35 +266,32 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script defer>
     const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
-const overlay = document.createElement("div");
+    const navLinks = document.getElementById("navLinks");
+    const overlay = document.createElement("div");
 
-overlay.classList.add("navbar__overlay");
-document.body.appendChild(overlay);
+    overlay.classList.add("navbar__overlay");
+    document.body.appendChild(overlay);
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("active");
-  overlay.classList.toggle("active", isOpen);
-});
+    navToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      overlay.classList.toggle("active", isOpen);
+    });
 
-overlay.addEventListener("click", () => {
-  navLinks.classList.remove("active");
-  overlay.classList.remove("active");
-});
+    overlay.addEventListener("click", () => {
+      navLinks.classList.remove("active");
+      overlay.classList.remove("active");
+    });
 
-// Cerrar el menú al hacer clic en un enlace
-document.querySelectorAll('.navbar__links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    overlay.classList.remove('active');
-  });
-});
+    document.querySelectorAll('.navbar__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
 
-
-
-    // efecto blur del navbar al scrollear
     window.addEventListener('scroll', () => {
       const navbar = document.querySelector('.navbar');
       if (window.scrollY > 10) {
